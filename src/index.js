@@ -18,6 +18,10 @@ function quebraemParagrafos(texto){
 }
 //criar um array com palavras
 
+function limpaPalavras(palavra){
+  return palavra.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+}
+
 function verificaPalavrasDuplicadas(texto){
     const listaPalavras = texto.split(' ');
     const resultado = {}
