@@ -10,11 +10,12 @@ fs.readFile(link, 'utf-8', (erro, texto) => {
 
 function quebraemParagrafos(texto){
     const paragrafos = texto.toLowerCase().split('\n');
-    const contagem = paragrafos.map((paragrafo) =>{
+    //se tiver conteúdo true, se não false 
+    const contagem = paragrafos.flatMap((paragrafo) =>{
+      if(!paragrafo) return [];
       return verificaPalavrasDuplicadas(paragrafo);
     })
-    console.log(contagem);
-    
+    console.log(contagem); 
 }
 //criar um array com palavras
 
