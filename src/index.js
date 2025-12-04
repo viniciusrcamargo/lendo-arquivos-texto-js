@@ -8,8 +8,15 @@ fs.readFile(link, 'utf-8', (erro, texto) => {
   quebraemParagrafos(texto);
 })
 
+function contaPalavras(texto){
+    const listaPalavras = texto.split(' ');
+    const resultado = {}}
+
+    function extraiParágrafos(texto){
+      return texto.toLowerCase().split('\n');
+    }
+
 function quebraemParagrafos(texto){
-    const paragrafos = texto.toLowerCase().split('\n');
     //se tiver conteúdo true, se não false 
     const contagem = paragrafos.flatMap((paragrafo) =>{
       if(!paragrafo) return [];
