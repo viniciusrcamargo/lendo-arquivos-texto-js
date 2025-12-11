@@ -1,0 +1,24 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cli.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusrcamargo/lendo-arquivos-texto-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciusrcamargo/lendo-arquivos-texto-js/issues"
+  },
+  "homepage": "https://github.com/viniciusrcamargo/lendo-arquivos-texto-js#readme",
+  "dependencies": {
+    "commander": "^14.0.2"
+  }
+}
