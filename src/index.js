@@ -1,25 +1,10 @@
-const fs = require('fs');
-
-const caminhoArquivo = process.argv;
-const link = caminhoArquivo[2];
-
-fs.readFile(link, 'utf-8', (erro, texto) => {
-  try {
-    contaPalavras(texto);
-  }catch (erro) {
-    console.log('Erro gerado', erro);
-    
-  }
-})
-
-function contaPalavras(texto) {
-  //se tiver conteúdo true, se não false 
-  const paragrafos = extraiParágrafos(texto);
-  const contagem = paragrafos.flatMap((paragrafo) => {
-    if (!paragrafo) return [];
-    return verificaPalavrasDuplicadas(paragrafo);
-  })
-  console.log(contagem);
+export function contaPalavras(texto) {
+    const paragrafos = extraiParagrafos(texto);
+    const contagem = paragrafos.flatMap(paragrafo => {
+        if (!paragrafo) return [];
+        return verificaPalavrasDuplicadas(paragrafo);
+    });
+    return contagem;
 }
 
 function extraiParágrafos(texto) {
