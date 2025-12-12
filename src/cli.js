@@ -4,7 +4,7 @@ import { contaPalavras } from './index.js';
 import {Command} from 'commander';
 
 const programa = new Command();
-programa.version('0.0.1').option('-t,--texto<string>', 'Caminho do texto a ser processado').option('-d',--destino<string>, 'Caminho de destino do arquivo').action((opcoes) =>{
+programa.version('0.0.1').option('-t,--texto<string>', 'Caminho do texto a ser processado').option('-d,--destino<string>', 'Caminho de destino do arquivo').action((opcoes) =>{
   const {texto, destino} = opcoes;
   if(!texto ||!destino){
     console.log('É necessário informar o caminho do arquivo e o destino');
